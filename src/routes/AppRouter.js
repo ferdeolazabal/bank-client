@@ -9,9 +9,9 @@ import Layout from "../components/Layout";
 import LoginScreen from "../components/Login/LoginScreen";
 
 const AppRouter = () => {
-  const uid = useSelector((state) => state.auth.uid);
+  const user = useSelector((state) => state.auth.user);
 
-  const isAuthenticated = !!uid;
+  const isAuthenticated = !!user.id;
 
   return (
     <Router>

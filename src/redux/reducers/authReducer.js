@@ -1,8 +1,6 @@
 import { LOGIN, LOGOUT } from "../types/types";
 
 const initialState = {
-  uid: null,
-  name: null,
   user: {},
 };
 
@@ -15,8 +13,6 @@ export const authReducer = (state = initialState, action) => {
       };
     case LOGOUT:
       return {
-        uid: null,
-        name: null,
         user: {},
       };
     default:

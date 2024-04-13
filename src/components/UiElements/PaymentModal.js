@@ -8,7 +8,7 @@ import { httpPostPayment } from "../../redux/actions/payments";
 
 const PaymentModal = () => {
   const dispatch = useDispatch();
-  const { user, uid } = useSelector(({ auth }) => auth.user);
+  const user = useSelector(({ auth }) => auth.user);
 
   const [initialValues, setInitialValues] = useState({
     amount: "",
@@ -22,7 +22,7 @@ const PaymentModal = () => {
   const handleSubmit = (values) => {
     Object.assign(values, {
       amount: values.amount.toString().replace(/\./g, ""),
-      user: uid || user.id,
+      user: user.id,
       status: "success",
     });
     console.log("values", values);

@@ -14,8 +14,6 @@ export const startLogin = (email, password) => {
 
       dispatch(
         login({
-          uid: body.uid,
-          name: body.name,
           user: body.user,
         })
       );
@@ -77,8 +75,6 @@ export const startRegister = (email, password, firstName, lastName) => {
 
       dispatch(
         login({
-          uid: body.uid,
-          name: body.name,
           user: body.user,
         })
       );
