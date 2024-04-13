@@ -31,7 +31,7 @@ Permite ver la lista de usuarios registrados en la plataforma.
 Búsqueda de Pagos:
 Los usuarios pueden buscar pagos por nombre de usuario o destinatario. Se aplican filtros de búsqueda por nombre de usuario, forma de pago, fecha de pago, monto, estado y destinatario.
 
-Implementación de una autenticación básica utilizando sesiones o tokens JWT para que los usuarios puedan iniciar sesión y acceder a la funcionalidad de la aplicación.
+Implementación de una autenticación básica utilizando tokens JWT para que los usuarios puedan iniciar sesión y acceder a la funcionalidad de la aplicación.
 
 Documentación Adicional
 Para obtener más información sobre las rutas disponibles en el backend y cómo interactuar con la API, consulte la documentación del backend en [https://documenter.getpostman.com/view/17673444/2sA3Bj7DHK]([https://documenter.getpostman.com/view/17673444/2sA3Bj7DHK])
