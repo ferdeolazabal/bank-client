@@ -25,6 +25,7 @@ const PaymentModal = () => {
       user: uid || user.id,
       status: "success",
     });
+    console.log("values", values);
     dispatch(httpPostPayment(values));
   };
 

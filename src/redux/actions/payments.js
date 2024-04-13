@@ -33,6 +33,7 @@ const getPayments = (payload) => ({
 
 export const httpPostPayment = (body) => async (dispatch) => {
   try {
+    console.log("body", body);
     const url = `${baseUrl}/payments/new`;
 
     fetch(url, {
