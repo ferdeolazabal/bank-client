@@ -5,7 +5,7 @@ Este es el frontend de la aplicación PayMeLo, desarrollado en React con Tailwin
 ## Acceso a la Aplicación
 La aplicación frontend está alojada en https://paymelo.netlify.app.
 
-##Scripts Disponibles
+## Scripts Disponibles
 En el directorio del proyecto, puede ejecutar:
 
 ### `npm i`
