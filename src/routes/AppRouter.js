@@ -10,15 +10,8 @@ import LoginScreen from "../components/Login/LoginScreen";
 
 const AppRouter = () => {
   const uid = useSelector((state) => state.auth.uid);
-  const token = localStorage.getItem("token");
-  const tokenInitDate = localStorage.getItem("token-init-date");
 
-  const EXPIRATION_TIME = 1 * 60 * 60 * 1000;
-  const isAuthenticated =
-    (token &&
-      tokenInitDate &&
-      new Date().getTime() - Number(tokenInitDate) < EXPIRATION_TIME) ||
-    uid;
+  const isAuthenticated = !!uid;
 
   return (
     <Router>
