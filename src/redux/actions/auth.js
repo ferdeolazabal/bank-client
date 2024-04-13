@@ -1,6 +1,6 @@
 // @ts-ignore
-import { fetchSinToken } from "../../helpers/fetch";
-import { LOGIN, LOGOUT } from "../types/types";
+import { fetchConToken, fetchSinToken } from "../../helpers/fetch";
+import { CHECKLOGIN, LOGIN, LOGOUT } from "../types/types";
 import Swal from "sweetalert2";
 
 export const startLogin = (email, password) => {
@@ -45,8 +45,7 @@ export const refreshAuthToken = () => {
       console.log("body", body);
       if (body.ok) {
         localStorage.setItem("token", body.token);
-        // @ts-ignore
-        localStorage.setItem("token-init-date", new Date().getTime());
+        localStorage.setItem("token-init-date", `${new Date().getTime()}`);
       } else {
         console.error("Error al actualizar el token:", body.msg);
       }
@@ -70,8 +69,7 @@ export const startRegister = (email, password, firstName, lastName) => {
 
     if (body.ok) {
       localStorage.setItem("token", body.token);
-      // @ts-ignore
-      localStorage.setItem("token-init-date", new Date().getTime());
+      localStorage.setItem("token-init-date", `${new Date().getTime()}`);
 
       dispatch(
         login({
@@ -97,3 +95,24 @@ export const startLogout = () => {
 };
 
 const logout = () => ({ type: LOGOUT });
+
+export const startChecking = () => {
+  return async (dispatch) => {
+    const resp = await fetchConToken("auth/renew");
+    const body = await resp.json();
+    if (body.ok) {
+      localStorage.setItem("token", body.token);
+      localStorage.setItem("token-init-date", `${new Date().getTime()}`);
+
+      dispatch(
+        login({
+          user: body.user,
+        })
+      );
+    } else {
+      dispatch(checkingFinish());
+    }
+  };
+};
+
+const checkingFinish = () => ({ type: CHECKLOGIN });

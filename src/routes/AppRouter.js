@@ -1,17 +1,28 @@
 // @ts-nocheck
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import Layout from "../components/Layout";
 import LoginScreen from "../components/Login/LoginScreen";
+import { startChecking } from "../redux/actions/auth";
 
 const AppRouter = () => {
+  const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
+  const checking = useSelector((state) => state.auth.checking);
 
   const isAuthenticated = !!user.id;
+
+  useEffect(() => {
+    dispatch(startChecking());
+  }, [dispatch]);
+
+  if (checking) {
+    return <h5>Espere...</h5>;
+  }
 
   return (
     <Router>

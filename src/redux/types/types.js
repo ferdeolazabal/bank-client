@@ -1,5 +1,6 @@
 export const LOGOUT = "LOGOUT ";
 export const LOGIN = "LOGIN";
+export const CHECKLOGIN = "CHECKLOGIN";
 export const GET_USERS = "GET_USERS";
 export const GET_PAYMENTS = "GET_PAYMENTS";
 export const ADD_PAYMENT = "ADD_PAYMENT";
