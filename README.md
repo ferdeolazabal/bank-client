@@ -18,7 +18,7 @@ Por defecto en http://localhost:3000 para acceder a la aplicación.
 ### `npm run build`
 Construye la aplicación para producción en la carpeta build.
 
-### Funcionalidades
+## Funcionalidades
 Registro de Pagos:
 Permite a los usuarios registrar pagos.
 
