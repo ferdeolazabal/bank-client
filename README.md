@@ -1,71 +1,38 @@
-# Getting Started with Create React App
+## Frontend de la Aplicación PayMeLo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el frontend de la aplicación PayMeLo, desarrollado en React con TailwindCSS. Permite a los usuarios registrar pagos, descargar registros de pagos en formato CSV, ver usuarios registrados y buscar pagos por nombre de usuario o destinatario.
 
-## Available Scripts
+## Acceso a la Aplicación
+La aplicación frontend está alojada en https://paymelo.netlify.app.
 
-In the project directory, you can run:
+##Scripts Disponibles
+En el directorio del proyecto, puede ejecutar:
+
+### `npm i`
+Para instalar las dependencias del proyecto.
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejecuta la aplicación en modo de desarrollo.
+Por defecto en http://localhost:3000 para acceder a la aplicación.
 
 ### `npm run build`
+Construye la aplicación para producción en la carpeta build.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Funcionalidades
+Registro de Pagos:
+Permite a los usuarios registrar pagos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Descarga de Registros de Pagos:
+Los usuarios pueden descargar registros de pagos en formato CSV.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Visualización de Usuarios Registrados:
+Permite ver la lista de usuarios registrados en la plataforma.
 
-### `npm run eject`
+Búsqueda de Pagos:
+Los usuarios pueden buscar pagos por nombre de usuario o destinatario. Se aplican filtros de búsqueda por nombre de usuario, forma de pago, fecha de pago, monto, estado y destinatario.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Implementación de una autenticación básica utilizando sesiones o tokens JWT para que los usuarios puedan iniciar sesión y acceder a la funcionalidad de la aplicación.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Documentación Adicional
+Para obtener más información sobre las rutas disponibles en el backend y cómo interactuar con la API, consulte la documentación del backend en [https://documenter.getpostman.com/view/17673444/2sA3Bj7DHK]([https://documenter.getpostman.com/view/17673444/2sA3Bj7DHK])
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# bank-client
