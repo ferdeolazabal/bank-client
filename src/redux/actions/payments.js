@@ -72,7 +72,7 @@ export const filterPaymentsByUser = (userId) => {
     if (userId === "") {
       filteredPayments = payments;
     } else {
-      filteredPayments = payments.filter((p) => p.user?.id === userId);
+      filteredPayments = payments.filter((p) => p.user?._id === userId);
     }
 
     dispatch({

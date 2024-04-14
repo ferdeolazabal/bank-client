@@ -30,8 +30,8 @@ const PaymentsHeader = () => {
       return roundedDate.toISOString().slice(0, 10);
     }) || [];
 
-  const uniqueUsers = Array.from(new Set(users?.map((user) => user?.id)))?.map(
-    (id) => users?.find((user) => user?.id && user?.id === id)
+  const uniqueUsers = Array.from(new Set(users?.map((user) => user?._id)))?.map(
+    (id) => users?.find((user) => user?._id && user?._id === id)
   );
 
   const uniqueAmounts = totalAmounts?.filter(
@@ -92,12 +92,12 @@ const PaymentsHeader = () => {
             {uniqueUsers?.map((user) => {
               return (
                 <option
-                  key={user?.id}
-                  value={user?.id}
+                  key={user?._id}
+                  value={user?._id}
                   className="border-gray-200 bg-gray-50 text-gray-500"
                 >
-                  {user?.firstName || ""}&nbsp;
-                  {user?.lastName || ""}
+                  {user?.firstName}&nbsp;
+                  {user?.lastName}
                 </option>
               );
             })}
