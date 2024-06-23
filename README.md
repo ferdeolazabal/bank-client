@@ -1,4 +1,5 @@
 ## Frontend de la Aplicación PayMeLo
+[![Netlify Status](https://api.netlify.com/api/v1/badges/42994222-8ac5-44a0-a87b-1163400e1c99/deploy-status)](https://app.netlify.com/sites/paymelo/deploys)
 
 Este es el frontend de la aplicación PayMeLo, desarrollado en React con TailwindCSS. Permite a los usuarios registrar pagos, descargar registros de pagos en formato CSV, ver usuarios registrados y buscar pagos por nombre de usuario o destinatario.
 
